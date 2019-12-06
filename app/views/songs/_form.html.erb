@@ -1,0 +1,17 @@
+<%= render 'layouts/navbar' %>
+<h1><%= @song.id ? 'Edit song' : 'Add song' %></h1>
+<%= form_for [@artist, @song] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name, required: true %>
+	<br />
+	<%= f.label :genre %>
+	<%= f.text_field :genre, required: true %>
+	<br />
+	<div>
+		<%= f.label "Song Length" %>
+		<%= f.select :minutes, Array(0..10).collect{|i| i}, required: true %>
+		:
+		<%= f.select :seconds, Array(00..59).collect{|i| sprintf("%02d", i)}, required: true %>
+	</div>
+	<%= f.submit %>
+<% end %>

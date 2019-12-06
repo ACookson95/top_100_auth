@@ -1,0 +1,10 @@
+<%= render 'layouts/navbar' %>
+<h1>Top Billboards!</h1>
+<%= link_to 'Create a new billboard', new_billboard_path %>
+<ul>
+	<% @billboards.each do |billboard| %>
+		<li>
+		<%= link_to billboard.name, billboard %>
+		</li>
+	<% end %>
+</ul>
