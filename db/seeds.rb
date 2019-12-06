@@ -13,14 +13,15 @@
   10.times do
     artist = Artist.create( 
       name: Faker::Music.band,
-      genre: Faker::Music.genre,
+      billboard_id: billboard.id
     )
     20.times do
       Song.create( 
         name: Faker::Book.title,
         genre: Faker::Music.genre,
+        minutes: 4,
+        seconds: 20,
         artist_id: artist.id
-        # billboard_id: billboards.sample.id
       )
     end
   end
