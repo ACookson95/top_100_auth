@@ -16,3 +16,34 @@
 
  @import "materialize";
  @import "flash";
+
+body {
+	background-image: url("https://images.pexels.com/photos/736355/pexels-photo-736355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	height: 100vh;
+}
+
+.nav-wrapper a {
+	color: #2196f3;
+	padding: 20px;
+}
+
+.nav-wrapper {
+	background-color: #e3f2fd;
+}
+
+.body {
+	background-color: rgba(187, 222, 250, 0.5);
+	height: 100vh;
+	text-align: center;
+	border: 5px solid #64b5f6 !important;
+	border-radius: 5px;
+}
+
+.body a{
+	color: white;
+}
