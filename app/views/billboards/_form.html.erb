@@ -2,8 +2,7 @@
 <div class="body">
 <h1><%= @billboard.id ? 'Edit Billboard' : 'Create Billboard' %></h1>
 <%= form_for @billboard do |f| %>
-	<%= f.label :name %>
-	<%= f.text_field :name, required: true %>
+	<%= f.text_field :name, required: true, style: "background-color:#e3f2fd; text-align: center;", placeholder: "Billboard Name" %>
 	<br />
 	<%= f.submit %>
 <% end %>

@@ -8,25 +8,23 @@ class BillboardsController < ApplicationController
   end
   def new
   	@billboard = Billboard.new
-  	render partial: 'form'
   end
   def create
   	@billboard = Billboard.new(billboard_params)
   	if @billboard.save
   		redirect_to billboards_path
   	else
-  		render partial: 'form'
+  		render :new
   	end
   end
   def edit
   	# before_action set_billboard to get the ID
-  	render partial: 'form'
   end
   def update
   	if @billboard.update(billboard_params)
   		redirect_to @billboard
   	else
-  		render partial: 'form'
+  		render :edit
   	end
   end
   def destroy

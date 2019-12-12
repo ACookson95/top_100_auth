@@ -1,11 +1,10 @@
 <%= render 'layouts/navbar' %>
 <h1><%= @song.id ? 'Edit song' : 'Add song' %></h1>
 <%= form_for [@artist, @song] do |f| %>
-	<%= f.label :name %>
-	<%= f.text_field :name, required: true %>
+	<%= f.text_field :name, required: true, style: "background-color:#e3f2fd; text-align: center;", placeholder: "Song Name" %>
 	<br />
 	<%= f.label :genre %>
-	<%= f.text_field :genre, required: true %>
+	<%= f.text_field :genre, required: true, style: "background-color:#e3f2fd; text-align: center;", placeholder: "Genre" %>
 	<br />
 	<div>
 		<%= f.label "Song Length" %>

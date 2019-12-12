@@ -1,6 +1,6 @@
 <%= render 'layouts/navbar' %>
 <div class="body">
-	<p class="left"><%= link_to 'Top Billboards Home', root_path %></p>
+	<div class="left"><%= link_to 'Top Billboards Home', root_path %></div>
 	<h1><%= @billboard.name %></h1>
 	<%= link_to 'View Artists', billboard_artists_path(@billboard) %>
 	<br />

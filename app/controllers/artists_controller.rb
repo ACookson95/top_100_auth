@@ -9,24 +9,22 @@ class ArtistsController < ApplicationController
   end
   def new
   	@artist = @billboard.artists.new
-  	render partial: 'form'
   end
   def create
   	@artist = @billboard.artists.new(artist_params)
   	if @artist.save
   		redirect_to [@billboard, @artist]
   	else
-  		render partial: 'form'
+  		render :new
   	end
   end
   def edit
-  	render partial: 'form'
   end
   def update
   	if @artist.update(artist_params)
   		redirect_to [@billboard, @artist]
   	else
-  		render partial: 'form'
+  		render :edit
   	end
   end
   def destroy

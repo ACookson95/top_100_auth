@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-	height: 100vh;
+	height: 100%;
 }
 
 .nav-wrapper a {
@@ -37,13 +37,20 @@ body {
 }
 
 .body {
-	background-color: rgba(187, 222, 250, 0.5);
-	height: 100vh;
+	background-color: rgba(187, 222, 250, 0.6);
+	height: 100%;
 	text-align: center;
-	border: 5px solid #64b5f6 !important;
+	border: 5px solid #26669b !important;
 	border-radius: 5px;
+	padding: 50px;
 }
 
 .body a{
-	color: white;
+	color:#26669b;
+}
+
+.collection-item {
+	background-color: rgba(187, 222, 250, 0.6) !important;
+	font-size: 18px !important;
+
 }
