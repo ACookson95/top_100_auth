@@ -1,8 +1,10 @@
 <%= render 'layouts/navbar' %>
-<h1><%= @artist.name %></h1>
-<%= link_to 'View Songs', artist_songs_path(@artist) %>
-<br />
-<%= link_to 'Edit', edit_billboard_artist_path(@billboard) %>
-<br />
-<%= link_to 'Delete', [@billboard, @artist], method: :delete %>
-<p><%= link_to 'Back to Artists', billboard_artists_path(@billboard) %></p>
+	<div class="body">
+	<h1><%= @artist.name %></h1>
+	<%= link_to 'View Songs', artist_songs_path(@artist) %>
+	<br />
+	<%= link_to 'Edit', edit_billboard_artist_path(@billboard) %>
+	<br />
+	<%= link_to 'Delete', [@billboard, @artist], method: :delete %>
+	<p><%= link_to 'Back to Artists', billboard_artists_path(@billboard) %></p>
+</div>
